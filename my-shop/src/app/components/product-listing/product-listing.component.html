@@ -1,0 +1,16 @@
+<p>Products:</p>
+<div class="d-flex flex-wrap">
+        <div *ngFor="let x of productCollection" class="card m-3" style="width: 18rem;">
+            <a routerLink="/products/{{x.id}}">
+            <img src="{{x.product_Image}}" class="card-img-top p-3" alt="...">
+            </a>
+            <div class="card-body">
+                <h5 class="card-title">{{x.name}}</h5>
+                <p>{{x.id}}</p>
+                <div class="d-flex justify-content-between">
+                    <p class="card-text text-primary fw-bold">${{x.price}}</p>
+                    <i class="bi bi-bag"></i>
+                </div>
+            </div>
+        </div>
+</div>

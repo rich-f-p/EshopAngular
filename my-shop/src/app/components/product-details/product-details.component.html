@@ -1,0 +1,30 @@
+<p>product-details</p>
+<div *ngIf="details">
+    <section class="container">
+        <div class="row align-items-center">
+            <div class="col image">
+                <img src="{{details.product_Image}}" alt="img..." height="400px" width="600px">
+            </div>
+
+            <div class="col container">
+                <h1 class="">{{details.name}}</h1>
+                <h3 class="btn bg-primary-subtle fw-bold text-primary-emphasis">${{details.price}}</h3>
+                <p>{{details.description}}</p>
+                <div class="d-flex container m-3">
+                    <button class="btn border m-3">1 <i class="bi bi-caret-down-fill"></i></button>
+                    <button class="btn btn-dark m-3"> Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container bg-secondary-subtle p-1 mt-1">
+        <div class="d-flex p-3">
+            <button class="btn border border-white m-1">Description</button>
+            <button class="btn border border-white m-1">Reviews</button>
+        </div>
+        <p>{{details.description}}</p>
+    </section>
+</div>
+<div *ngIf="!details">
+    <p>Not found!</p>
+</div>
